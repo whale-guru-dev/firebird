@@ -1485,4 +1485,158 @@ header .container-fluid {
     font-size: 30px;
     text-transform: uppercase;
 }
+
+@keyframes flicker {
+    50% {
+        color: white;
+        filter: saturate(200%) hue-rotate(20deg);
+    }
+}
+
+.color-pad {
+    color: #F1F9FB;
+    --color1: #63c7e9;
+    --color2: #48b4f8;
+    --color3: #3fa8fa;
+    --color4: #0000ff;
+}
+
+.number-empathy {
+    --interval: 1s;
+    /*display: block;*/
+    text-shadow: 0 0 10px var(--color1), 0 0 10px var(--color2),
+    0 0 10px var(--color3), 0 0 10px var(--color4);
+    will-change: filter, color;
+    filter: saturate(60%);
+    animation: flicker steps(100) var(--interval) 1s infinite;
+}
+
+
+.exchange-main {
+    background: #1b1b1b94;
+    /*padding: 40px 120px 40px 60px;*/
+    padding: 40px 70px 40px 70px;
+    overflow: hidden;
+    max-width: 80%;
+    margin-left: 176px;
+    margin-right: auto;
+}
+
+@media only screen and (max-width: 767px) {
+    .exchange-main {
+        margin-left: auto;
+    }
+}
+
+.exchange-main p {
+    color: #5ab6f7;
+}
+
+.exchange-main h4 {
+    color: #5ab6f7;
+}
+
+.exchange-main i {
+    background: #5ab6f7;
+    margin-bottom: 0px;
+}
+
+.exchange-protect {
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+.exchange-main-box-title {
+    margin-bottom: 0.5em;
+}
+
+.exchange-button a {
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    border: 0;
+    padding: 3px 15px;
+    text-transform: uppercase;
+    bottom: 5px;
+}
+
+.exchange-button .btn-effect:before {
+    border-radius: 0;
+}
+
+.exchange-button {
+    margin-top: 5px;
+}
+
+.exchange-button a {
+    border-radius: 0px;
+}
+
+.exchange-protect {
+    border-top: 1px solid #e4e7ed;
+    margin-top: 10px;
+    padding-top: 40px;
+}
+
+.exchange-protect img {
+    display: inline-block;
+    float: left;
+    width: 10%;
+    margin-top: 5px;
+}
+
+.exchange-protect p {
+    display: inline-block;
+    /* float: left; */
+    font-size: 15px;
+    /* width: 79%; */
+    text-align: center;
+    /*margin-left: 40px;*/
+}
+
+.box-shadow {
+    -webkit-box-shadow: 0px 0px 65px 0px rgba(157, 172, 193, 0.25);
+    box-shadow: 0px 0px 65px 0px rgba(157, 172, 193, 0.25);
+}
+
+.exchange-item .dropdown-item:focus {
+    background: #f8f9fa;
+    color: #212529;
+}
+
+@media (max-width: 991px) {
+    .exchange-main {
+        padding: 0;
+    }
+
+    .exchange-main p {
+        margin: 1.5em 0 0.0em 0;
+    }
+
+    .exchange-form-row {
+        text-align: start;
+    }
+
+    .exchange-item input {
+        width: 75%;
+        margin-left: 10%;
+    }
+
+    .exchange-form-row-div_start {
+        text-align: start;
+    }
+
+    .exchange-form-row-div_center {
+        text-align: center;
+    }
+
+    .exchange-item .dropdown {
+        font-size: 8px;
+    }
+
+    .exchange-protect p {
+        font-size: 12px;
+    }
+}
+
 /*End*/
