@@ -1,0 +1,103 @@
+<% include ./header %>
+
+<div class="container admin-container">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h1 class="admin-container-header-title">Firebird Admin</h1>
+        </div>
+    </div>
+
+    <div class="row admin-container-section">
+        <div class="col-md-3"></div>
+        <div class="col-sm-12 col-md-6">
+            <h2 class="admin-container-section-title">ETH in Smart Contract : <span id="iostAmtInContract">1</span> ETH
+            </h2>
+            <div class="row text-center">
+                <form class="form-inline">
+                    <div class="form-group">
+                        <label class="admin-container-section-content-label" for="depositAmt">Amount (in XFB)</label>
+                        <input type="text" class="form-control" id="depositAmt" placeholder="Amount">
+                    </div>
+                    <button type="button" id="depositBtn" class="btn btn-primary ">Deposit XFB</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="row admin-container-table-section">
+        <div class="col-md-6">
+            <h4 class="admin-container-table-section-title">Top 512 Redistribution</h4>
+
+            <div class="table-responsive">
+                <table class="table table-dark">
+                    <caption>Top 512 Redistribution</caption>
+                    <thead>
+                    <tr>
+                        <th scope="col">Number</th>
+                        <th scope="col">Address</th>
+                        <th scope="col">Amount</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Otto</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Thornton</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>the Bird</td>
+                        <td>2</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <button type="button" id="payTop512Btn" class="btn btn-primary ">PAY NOW</button>
+        </div>
+
+        <div class="col-md-6">
+            <h4 class="admin-container-table-section-title">Random 25 Redistribution</h4>
+
+            <div class="table-responsive">
+                <table class="table table-dark">
+                    <caption>Random 25 Redistribution</caption>
+                    <thead>
+                    <tr>
+                        <th scope="col">Number</th>
+                        <th scope="col">Address</th>
+                        <th scope="col">Amount</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Otto</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Thornton</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>the Bird</td>
+                        <td>2</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <button type="button" id="payRandome25Btn" class="btn btn-primary ">PAY NOW</button>
+        </div>
+    </div>
+</div>
+
+<% include ./footer %>

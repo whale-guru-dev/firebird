@@ -10,4 +10,8 @@ router.get('/whitepaper', function(req, res, next) {
   res.render('whitepaper');
 });
 
+router.get('/admin', function(req, res, next) {
+  res.render('admin');
+});
+
 module.exports = router;
