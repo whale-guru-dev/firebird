@@ -1156,6 +1156,20 @@ header .container-fluid {
 	background: black;
 	color: transparent;
 }
+
+@media (max-width: 767px) {
+	.neon::before, .neon::after {
+		content: attr(data-text);
+		color: white;
+		-webkit-filter: blur(0.02em);
+		filter: blur(0.02em);
+		position: absolute;
+		top: 0;
+		left: 0;
+		pointer-events: none;
+	}
+}
+
 .neon::before, .neon::after {
 	content: attr(data-text);
 	color: white;
@@ -1166,6 +1180,7 @@ header .container-fluid {
 	/*left: 0;*/
 	pointer-events: none;
 }
+
 .neon::after {
 	mix-blend-mode: difference;
 }

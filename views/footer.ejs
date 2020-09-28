@@ -1,0 +1,79 @@
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"
+        integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+<script src="/js/countdown.js"></script>
+
+<script src="/js/popper.min.js"></script>
+
+<script src="/js/bootstrap.min.js"></script>
+
+<script>
+
+    var toggles = document.querySelectorAll(".c-hamburger");
+
+
+    for (var i = toggles.length - 1; i >= 0; i--) {
+
+        var toggle = toggles[i];
+
+        toggleHandler(toggle);
+
+    }
+    ;
+
+
+    function toggleHandler(toggle) {
+
+        toggle.addEventListener("click", function (e) {
+
+            e.preventDefault();
+
+            if (this.classList.contains("is-active") === true) {
+
+                this.classList.remove("is-active");
+
+                $('.open').removeClass('oppenned');
+
+            } else {
+
+                this.classList.add("is-active");
+
+                $(".open").addClass('oppenned');
+
+            }
+
+        });
+
+    }
+
+    $(".sub-menu li a").click(function (event) {
+
+        $(".open").removeClass('oppenned');
+
+        $(".c-hamburger").removeClass('is-active');
+
+
+    });
+
+
+    $(function () {
+        // This will select everything with the class smoothScroll
+        // This should prevent problems with carousel, scrollspy, etc...
+        $('.menudatabar').click(function () {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000); // The number here represents the speed of the scroll in milliseconds
+                    return false;
+                }
+            }
+        });
+    });
+</script>
+
+</body>
+
+</html>
